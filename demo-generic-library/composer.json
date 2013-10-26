@@ -1,0 +1,8 @@
+{
+	"name": "crazyjaco/phpunit-test",
+	"description": "A test of using composer with phpunit",
+	"license": "proprietary",
+	"require": {
+		"phpunit/phpunit":"3.7.28"
+	}
+}

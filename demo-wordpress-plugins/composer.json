@@ -1,0 +1,19 @@
+{
+	"name": "crazyjaco/wordpress-composer-test",
+	"description": "A test of using composer with WordPress",
+	"license": "proprietary",
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "http://wpackagist.org"
+		}
+	],
+	"require": {
+		"wpackagist/yet-another-related-posts-plugin":"4.0.8",
+		"wpackagist/wp-super-cache":"1.3.2",
+		"wpackagist/jetpack":"2.5"
+	},
+	"require-dev": {
+		"wpackagist/developer":"1.2.5"
+	}
+}

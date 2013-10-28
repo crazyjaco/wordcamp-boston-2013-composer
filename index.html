@@ -31,6 +31,10 @@
 	</head>
 
 	<body>
+		<div id="branding" style="position: fixed; width: 100%;height: 75px;z-index: 30;left: 25px;bottom: 25px;">
+			<img style="float:left" height="75px" width="75px" src="images/oomph_logo.png" />
+			<span style="font-weight: normal; height: 70px; display: table-cell; vertical-align: middle;padding-left: 20px;"><h2>@crazyjaco</h2></span>
+		</div>
 
 		<div class="reveal">
 
@@ -170,12 +174,12 @@ $ mv composer.phar /usr/local/bin/composer
 						File acts as both a consumer and provider
 					</section>
 
-<section style="margin-top: -8%;"><pre><code style="margin-left: -30%; margin-right: -30%; max-height: 750px;">
+<section style="margin-top: -8%;"><pre><code style="margin-left: -10%; margin-right: -10%; max-height: 750px;">
 {
     "name": "bradley/mycoolproject",
     "description": "This project does cool stuff",
     "keywords": ["wordcamp", "boston", "cool"],
-    "homepage": "http://github.com/crazyjaco/monolog",
+    "homepage": "http://github.com/crazyjaco/mycoolproject",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -186,8 +190,8 @@ $ mv composer.phar /usr/local/bin/composer
         }
     ],
     "repositories":{
-			"type": "composer",
-			"url": "http://custom-repo.org"
+            "type": "composer",
+            "url": "http://custom-repo.org"
     },
     "require": {
         "oomph/framework": "3.2",
@@ -204,12 +208,12 @@ $ mv composer.phar /usr/local/bin/composer
 }	
 </code></pre></section>
 
-<section style="margin-top: -10%;"><pre style="font-size:.9em;"><code style="margin-left: -30%; margin-right: -30%; max-height: 750px;">
+<section style="margin-top: -10%;"><pre style="font-size:.9em;"><code style="margin-left: -10%; margin-right: -10%; max-height: 750px;">
 {
     "name": "bradley/mycoolproject",
     "description": "This project does cool stuff",
     "keywords": ["wordcamp", "boston", "cool"],
-    "homepage": "http://github.com/crazyjaco/monolog",
+    "homepage": "http://github.com/crazyjaco/mycoolproject",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -220,8 +224,8 @@ $ mv composer.phar /usr/local/bin/composer
         }
     ],
     "repositories":{
-			"type": "composer",
-			"url": "http://custom-repo.org"
+            "type": "composer",
+            "url": "http://custom-repo.org"
     },
     "require": {
         "oomph/framework": "3.2",
@@ -237,46 +241,6 @@ $ mv composer.phar /usr/local/bin/composer
     }
 }	
 </code></pre></section>
-<!--
-					<section style="margin-top:-7%;"> <- example composer.json 1 ->
-<pre class="ansi2html"  style="font-size:.45em;">
-{
-    <span class="fragment">"name": "monolog/monolog",
-    "description": "Sends your logs to files, sockets, inboxes, databases and various...",
-    "keywords": ["log", "logging", "psr-3"],</span>
-    <span class="fragment">"homepage": "http://github.com/Seldaek/monolog",
-    "type": "library",
-    "license": "MIT",</span>
-    <span class="fragment">"authors": [
-        {
-            "name": "Bradley Jacobs",
-            "email": "bjacobs@oomphinc.com",
-            "homepage": "http://oomphinc.com"
-        }
-    ],</span>
-    <span class="fragment">"repositories":{
-			"type": "composer",
-			"url": "http://custom-repo.org"
-    },</span>
-    <span class="fragment">"require": {
-        "oomph/framework": "3.2",
-        "bigcompany/api-library": "&gt;4.0"
-    },</span>
-    <span class="fragment">"require-dev": {
-        "custom-repo/unit-tester": "2.3.*",
-        "logger/logger": "1.7.*",
-        "debug/tools": "~2.0"
-    },</span>
-    <span class="fragment">"suggest": {
-        "mlehner/gelf-php": "Allow sending log messages to a GrayLog2 server",
-        "raven/raven": "Allow sending log messages to a Sentry server",
-        "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
-        "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
-        "ext-mongo": "Allow sending log messages to a MongoDB server"
-    }</span>
-}
-					</section>
--->
 
 					<section>
 						<h2>Composer.lock <img src="images/lock-icon.png" width="7.25%"/></h2>
@@ -298,23 +262,6 @@ $ mv composer.phar /usr/local/bin/composer
 					</section>
 
 				</section>
-<!--
-				<section>
-
-					<section>
-						<h2>Using Composer</h2>
-						<p>Commands</p>
-						<ul>
-							<li>install: <span style="color:grey">installs deps listed in require &amp; require-dev section</span></li>
-							<li>install --no-dev: <span style="color:grey">installs deps listed in require and require-dev sections</span></li>
-							<li>init: <span style="color:grey">creates composer.json file based on prompted input</span></li>
-							<li>validate: <span style="color:grey">checks json validity of composer.json</span></li>
-							<li>selfupdate: <span style="color:grey">update composer</span></li>
-							<li>update: <span style="color:grey">update your project to the latest dependencies based on your composer.json file. Updates your composer.lock file</span></li>
-						</ul>
-					</section>
--->
-				</section>
 
 				<section>
 					<section>
@@ -326,16 +273,6 @@ $ mv composer.phar /usr/local/bin/composer
 						<h2>Packagist.org</h2>
 						<p><a href="http://packagist.org">Packagist.org</a></p>
 						<img src="images/packagist.jpg"/>
-						<!--
-						<p>Explore - <a href="https://packagist.org/explore/">https://packagist.org/explore/</a></p>
-						<p>Submit - <a href="">placeholder for submittal</a></p>
-						<br/><br/>
-						<p>Biggest advantage over PEAR is Repositories</p>
-						<ul>
-							<li>Not just one channel</li>
-							<li>Very easy and quick to have a project added to Packagist</li>
-						</ul>
-					-->
 					</section>
 				</section>
 
@@ -350,16 +287,6 @@ $ mv composer.phar /usr/local/bin/composer
 						<h2><a href="http://wpackagist.org/">WPackagist.org</a></h2>
 						<br/>
 						<img src="images/wpackagist.jpg"/>
-						<!--
-						<p>How it works from WPackagist.org:</p>
-						<ul>
-							<li>Scans the WordPress Subversion repository for changes.</li>
-							<li>Fetches the tags for each updated plugin and maps those to versions.</li>
-							<li>Adds trunk as a dev version.</li>
-							<li>Rebuilds the composer package JSON files.</li>
-						<ul>
-						-->
-
 					</section>
 
 					<section>
@@ -407,7 +334,6 @@ $ mv composer.phar /usr/local/bin/composer
 					<section>
 						<h2>Demo 2</h2>
 						<p>Using the Custom Installer for WordPress Plugins</p>
-						composer.json placed in WordPress root
 						<pre><code>{
     "name": "crazyjaco/wordpress-composer-test",
     "description": "A test of using composer with WordPress",
@@ -430,34 +356,7 @@ $ mv composer.phar /usr/local/bin/composer
 					</section>
 
 				</section>
-<!--
-				<section>
 
-					<section>
-
-						<h2>Demo 3</h2>
-						<p>Loading WordPress as a dependency</p>
-						<pre><code>
-{
-    "name": "crazyjaco/wordpress",
-    "description": "Composer - WordPress demo",
-    "repositories": [{
-             "type": "vcs",
-             "url": "https://github.com/WordPress/WordPress.git"
-    	}],
-    "require": {
-        "wordpress/wordpress": ">=3.5"
-    }
-}
-						</code></pre>
-
-						<p>When repo type is 'vcs', creates connection to git.</br>
-						git remote -v</p><br/>
-						<p>On-going <a href="http://core.trac.wordpress.org/ticket/23912">trac</a> ticket to add Composer support to WordPress</p>
-					</section>
-
-				</section>
--->
 				<section>
 
 					<section>
@@ -476,7 +375,7 @@ $ mv composer.phar /usr/local/bin/composer
 					</section>
 
 					<section style="margin-top: -8%;">
-<pre style="font-size:.9em;"><code data-trim style="margin-left: -30%; margin-right: -30%; max-height: 750px;">
+<pre style="font-size:.9em;"><code data-trim style="margin-left: -10%; margin-right: -10%; max-height: 750px;">
 {
     "name": "crazyjaco/wp-full-demo",
     "description": "Full WordPress Install Demo",
@@ -547,29 +446,6 @@ $ mv composer.phar /usr/local/bin/composer
 
 				</section>
 
-<!--
-
-				<section>
-					<h2>Composer @ <img src="images/oomph-logo.jpg" style="margin-bottom: 0px; width: 20%;"/></h2>
-					<br/>
-					<p>Problem: Developer setups take too long and aren't necessarily consistent</p>
-					<br/><br/>
-					<p>Does Composer solve this problem.</p>
-					<span class="fragment">No.</span><br/>
-					<span class="fragment">Not yet, at least</span>
-					<br/>
-					<div class="fragment">
-						<p align="left">Obstacles:</p>
-						<ul>
-							<li>No Beanstalk Support (for vcs support)</li>
-							<!-<li>Creating an Oomph Packagist-style Repo for plugins and themes*</li>->
-						</ul>
-					</div>
-
-				</section>
--->
-
-
 				<section>
 					<h2>Wrapping Up</h2>
 					<ul>
@@ -601,7 +477,7 @@ $ mv composer.phar /usr/local/bin/composer
 					<h2>Thank You!</h2>
 					<a href="http://twitter.com/crazyjaco">@crazyjaco</a> | <a href="http://github.com/crazyjaco">github.com/crazyjaco</a>
 					<br/><br/>
-					<a href="http://fightingreality.com/presentations/wordcamp-boston-2013">http://fightingreality.com/presentations/wordcamp-boston-2013</a>
+					<!--<a href="http://fightingreality.com/presentations/wordcamp-boston-2013">http://fightingreality.com/presentations/wordcamp-boston-2013</a>-->
 					<br/><br/>
 				</section>
 
